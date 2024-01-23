@@ -1,7 +1,7 @@
 CXX=g++
 
-ex07_scoping: ex07_scoping.cpp
-	$(CXX) ex07_scoping.cpp -o ex07_scoping
+ex08: ex08.cpp
+	$(CXX) ex08.cpp -o ex08
 
 clean:
-	rm ex07_scoping *~
+	rm ex08 *~

@@ -1,1 +1,0 @@
-# fri_programming_examples
