@@ -1,1 +1,1 @@
-# FRI-I-Basic-C-Examples
+# fri_programming_examples
