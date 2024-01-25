@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
 	int a = 2;
 	int b = 10;
 
-	cout << "scopingDemo(a, b):	" << scopingDemo(a, b) << endl;
+	cout << "addTwoInts(a, b):	" << addTwoInts(a, b) << endl;
 
 	cout << a << endl;
 	cout << b << endl;

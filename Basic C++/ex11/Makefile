@@ -1,7 +1,7 @@
 CXX=g++
 
-ex09: ex09.cpp addTwoInts.h addTwoInts.cpp
-	$(CXX) ex09.cpp addTwoInts.cpp -o ex09
+ex11: ex11.cpp addTwoInts.h addTwoInts.cpp
+	$(CXX) ex11.cpp addTwoInts.cpp -o ex11
 
 clean:
-	rm ex09 *~
+	rm ex11 *~

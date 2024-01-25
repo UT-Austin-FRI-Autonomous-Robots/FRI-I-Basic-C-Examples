@@ -1,7 +1,7 @@
 CXX=g++
 
-ex08: ex08.cpp
-	$(CXX) ex08.cpp -o ex08
+ex09: ex09.cpp
+	$(CXX) ex09.cpp -o ex09
 
 clean:
-	rm ex08 *~
+	rm ex09 *~

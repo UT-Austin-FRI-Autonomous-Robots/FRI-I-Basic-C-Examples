@@ -3,46 +3,57 @@
 
 using namespace std;
 
-int addTwoVariables(int a, int b) {
-	a += 10;
-	b += 20;
-	return a + b;
-}
-
-int addTwoPointers(int *a, int *b) {
-	*a += 10;
-	*b += 20;
-	return *a + *b;
-}
-
-int addTwoReferences(int &a, int &b) {
-	a += 1000;
-	b += 2000;
-	return a + b;
-}
-
 int main(int argc, char **argv) {
-	int a = 4;
-	int b = 5;
+	int a;
+	int *b;
 
 	cout << "a:	" << a << endl;
+	cout << "&a:	" << &a << endl;
 	cout << "b:	" << b << endl;
-
-	cout << "===" << endl;
-	cout << "addTwoVariables(a, b):	 " << addTwoVariables(a, b) << endl;
-	cout << "a:	" << a << endl;
-	cout << "b:	" << b << endl;
+	cout << "*b:	" << *b << endl;
 
 	cout << "===" << endl;
-	cout << "addTwoVariables(&a, &b):	 " << addTwoPointers(&a, &b) << endl;
+
+	b = &a;
+	b = new int;
+
 	cout << "a:	" << a << endl;
+	cout << "&a:	" << &a << endl;
 	cout << "b:	" << b << endl;
+	cout << "*b:	" << *b << endl;
 
 	cout << "===" << endl;
-	cout << "addTwoReferences(a, b):	 " << addTwoReferences(a, b) << endl;
+	int &c = a;
+	c = 111;
+
 	cout << "a:	" << a << endl;
-	cout << "b:	" << b << endl;
-	
+	cout << "c:	" << c << endl;
+
+	delete b;
+
+	/*
+	cout << "===" << endl;
+
+	int d = 4;
+	c = d;
+
+	cout << "a:	" << a << endl;
+	cout << "c:	" << c << endl;
+	cout << "d:	" << d << endl;
+
+	cout << "===" << endl;
+	d = 5;
+
+	cout << "a:	" << a << endl;
+	cout << "c:	" << c << endl;
+	cout << "d:	" << d << endl;
+
+	cout << "===" << endl;
+	//Similarly, I can change a by assigning to the dereferenced b (the variable at address b)
+	*b = 1212;
+	cout << "a:	" << a << endl;
+	cout << "*b:	" << *b << endl;
+	*/
 
 	return 0;
 }

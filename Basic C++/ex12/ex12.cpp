@@ -1,35 +1,41 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
 int main(int argc, char **argv) {
-	vector<int> a;
+	int a = 9;
+	int b = a;
 
-	cout << "a.size(): " << a.size() << endl;
-	for(int i = 0; i < 10; i++) {
-		a.push_back(i);
-		cout << "a.push_back(i): " << endl;
+	/*
+		a == b -> true
+		a != b -> true
+		!(a != b) -> true
+		a > b
+		a >= b
+		a < b
+		a <= b
+
+	*/
+
+	if(a > b) {
+		cout << "a > b" << endl;
+	} else if (a == b) {
+		cout << "a == b" << endl;
+	} else {
+		cout << "a < b" << endl;
 	}
 
-	cout << "a.size(): " << a.size() << endl;
-
-	for(int i = 0; i < 10; i++) {
-		cout << "a[i]: " << a[i] << endl;
+	for(a = 0; a < 20; a++) {
+		if(a > b) {
+			cout << "a:	" << a << "	a > b" << endl;
+		} else if (a == b) {
+			cout << "a:	" << a << "	a == b" << endl;
+		} else {
+			cout << "a:	" << a << "	a < b" << endl;
+		}
 	}
+	
 
-	a.pop_back();
-	cout << "a.size(): " << a.size() << endl;
-	for(int i = 0; i < a.size(); i++) {
-		cout << "a[i]: " << a[i] << endl;
-	}
-
-	a.erase(a.begin() + 2);
-	for(int i = 0; i < a.size(); i++) {
-		cout << "a[i]: " << a[i] << endl;
-	}
 
 	return 0;
 }
-
-

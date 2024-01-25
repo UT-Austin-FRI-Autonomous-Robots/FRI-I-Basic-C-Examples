@@ -1,73 +1,47 @@
 #include <iostream>
 #include <cstdlib>
-#include <cstring>
 
 using namespace std;
 
-int main(int argc, char **argv) {	
-	int e[10];
-	for(int i = 0; i < 10; i++) {
-		e[i] = i + 10;
-	}
+int addTwoVariables(int a, int b) {
+	a += 10;
+	b += 20;
+	return a + b;
+}
 
-	//for(int i = 0; i < 100; i++) {
-	//	e[i] = i + 10;
-	//d}
+int addTwoPointers(int *a, int *b) {
+	*a += 10;
+	*b += 20;
+	return *a + *b;
+}
 
-	for(int i = 0; i < 10; i++)
-		cout << e[i] << endl;
+int addTwoReferences(int &a, int &b) {
+	a += 1000;
+	b += 2000;
+	return a + b;
+}
 
-	int *f = NULL;
-	f = (int *) malloc(10 * sizeof(int));
-	for(int i = 0; i < 10; i++) {
-		f[i] = i + 10;
-	}
-	for(int i = 0; i < 10; i++)
-		cout << f[i] << endl;
-	free(f);
+int main(int argc, char **argv) {
+	int a = 4;
+	int b = 5;
 
-	cout << "===" << endl;
-	f = (int *) malloc(20 * sizeof(int));
-	for(int i = 0; i < 20; i++) {
-		f[i] = i + 20;
-	}
-	for(int i = 0; i < 20; i++)
-		cout << f[i] << endl;
-	free(f);
+	cout << "a:	" << a << endl;
+	cout << "b:	" << b << endl;
 
 	cout << "===" << endl;
-	int *g = new int[10];
-	for(int i = 0; i < 10; i++) {
-		g[i] = i + 10;
-	}
-	for(int i = 0; i < 10; i++)
-		cout << g[i] << endl;
-	delete[] g;
+	cout << "addTwoVariables(a, b):	 " << addTwoVariables(a, b) << endl;
+	cout << "a:	" << a << endl;
+	cout << "b:	" << b << endl;
 
 	cout << "===" << endl;
-	g = new int[20];
-	for(int i = 0; i < 20; i++) {
-		g[i] = i + 20;
-	}
-	for(int i = 0; i < 20; i++)
-		cout << g[i] << endl;
-	delete[] g;
-
+	cout << "addTwoVariables(&a, &b):	 " << addTwoPointers(&a, &b) << endl;
+	cout << "a:	" << a << endl;
+	cout << "b:	" << b << endl;
 
 	cout << "===" << endl;
-	int a[10];
-	for(int i = 0; i < 10; i++) {
-		a[i] = 1000 + (i * 2);
-	}
-
-	g = new int[10];
-	memcpy(g, a, 10 * sizeof(int));
-	for(int i = 0; i < 10; i++)
-		cout << "a[" << i << "]:	" << a[i] << endl;
-	cout << "---" << endl;
-	for(int i = 0; i < 10; i++)
-		cout << "g[" << i << "]:	" << g[i] << endl;
-
+	cout << "addTwoReferences(a, b):	 " << addTwoReferences(a, b) << endl;
+	cout << "a:	" << a << endl;
+	cout << "b:	" << b << endl;
 	
 
 	return 0;
