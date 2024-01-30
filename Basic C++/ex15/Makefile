@@ -1,7 +1,7 @@
 CXX=g++
 
-ex14: ex14.cpp
-	$(CXX) ex14.cpp -o ex14
+ex15: ex15.cpp
+	$(CXX) ex15.cpp -o ex15
 
 clean:
-	rm -f ex14 *~
+	rm -f ex15 *~

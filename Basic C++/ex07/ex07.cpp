@@ -11,8 +11,8 @@ void runForLoop() {
 }
 
 //int - return value
-//int a - formal parameter
-//int b - formal parameter
+//int a - parameter
+//int b - parameter
 int addTwoInts(int a, int b) {
 	return a + b;
 }
@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
 	runForLoop();
 
 	/*
-	//1, 5 - actual parameters
+	//1, 5 - arguments
 	cout << "addTwoInts(1, 5):	" << addTwoInts(1, 5) << endl;
 
 	int a = 2;
